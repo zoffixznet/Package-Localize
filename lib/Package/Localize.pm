@@ -79,7 +79,8 @@ Say you've got this pesky package someone wrote that decided to use globals:
 
 =for pod_spiffy end code section
 
-Whenever you call C<inc>, it'll always be increasing that C<$var>, even if
+Whenever you call C<Foo::inc()>,
+it'll always be increasing that C<$var>, even if
 you call it from different places. C<Package::Localize> to the rescue:
 
 =for pod_spiffy start code section
