@@ -2,6 +2,9 @@ package Package::Localize;
 
 use strict;
 use warnings;
+
+# VERSION
+
 use Data::GUID;
 use Package::Stash;
 use Data::COW;

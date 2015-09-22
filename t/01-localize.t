@@ -1,7 +1,13 @@
 #!perl
 
+use strict;
+use warnings;
+
+# VERSION
+
 use Test::More;
 use Test::Deep;
+
 use lib 't';
 use Package::Localize;
 
