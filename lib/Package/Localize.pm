@@ -98,13 +98,10 @@ you call it from different places. C<Package::Localize> to the rescue:
 
 =head1 DESCRIPTION
 
-=for pod_spiffy start warning section
+This module allows you to use multple instances of packages that have
+package variables operated by the functions the module offers.
 
-Warning! This module is currently experimental and HERE BE DRAGONS!!
-
-=for pod_spiffy end warning section
-
-Currently there is no support for OO modules; functions only
+Currently there is no support for OO modules; functions only.
 
 =head1 METHODS
 
@@ -125,6 +122,11 @@ on this object to operate on localizes package variables only.
     my $p1_var = ${"$name::var"};
 
 Returns the name of the localized package.
+
+=head1 BUGS AND CAVEATS
+
+Currently there is no support for OO modules; functions only.
+Patches are definitely welcome though.
 
 =head1 SEE ALSO
 

@@ -18,7 +18,8 @@ Say you've got this pesky package someone wrote that decided to use globals:
     </div></div>
 </div>
 
-Whenever you call `inc`, it'll always be increasing that `$var`, even if
+Whenever you call `Foo::inc()`,
+it'll always be increasing that `$var`, even if
 you call it from different places. `Package::Localize` to the rescue:
 
 <div>
@@ -39,17 +40,10 @@ you call it from different places. `Package::Localize` to the rescue:
 
 # DESCRIPTION
 
-<div>
-    <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-warning.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
-</div>
+This module allows you to use multple instances of packages that have
+package variables operated by the functions the module offers.
 
-Warning! This module is currently experimental and HERE BE DRAGONS!!
-
-<div>
-    </div></div>
-</div>
-
-Currently there is no support for OO modules; functions only
+Currently there is no support for OO modules; functions only.
 
 # METHODS
 
@@ -70,6 +64,11 @@ on this object to operate on localizes package variables only.
     my $p1_var = ${"$name::var"};
 
 Returns the name of the localized package.
+
+# BUGS AND CAVEATS
+
+Currently there is no support for OO modules; functions only.
+Patches are definitely welcome though.
 
 # SEE ALSO
 
