@@ -37,7 +37,7 @@ sub new {
 
     return bless { id => $id, module => $module,
         eval => join ';',
-            map "local *$module::$_ = *$module::${id}::$_",
+            map "local \*${module}::$_ = \*${module}::${id}::$_",
                 uniq map $root_stash->list_all_symbols($_),
                     qw/SCALAR ARRAY HASH/,
         }, $class;
